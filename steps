@@ -1,0 +1,45 @@
+
+
+1- configure prisma
+2- create database
+
+3- create_tables {
+	message {
+		datas [ id_message, sender, fk_type_message, content, created_at,  ]
+	}
+	type_message {
+		datas [ id_type_message, image, video, audio, pdf, docx ]
+	}
+	group {
+		datas [ id_group, name, description, brand?, fk_message ]
+	}
+}
+
+4- create_routes {
+	group: {
+		type: post,
+		body: {
+			name, description, brand?
+		}
+	}
+	
+	group: {
+		type: get
+	}
+	
+	message: {
+		type: post, 
+		body: {
+			sender, type_message, content 
+		}
+	}
+	
+	message: {
+		type: get,
+		body: {
+			token
+		}
+	}
+	
+	
+}
