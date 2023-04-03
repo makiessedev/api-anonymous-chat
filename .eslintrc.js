@@ -1,9 +1,15 @@
 module.exports = {
+  parser: '@typescript-eslint/parser',
   env: {
     browser: true,
     es2021: true
   },
-  extends: 'standard-with-typescript',
+  plugins: ['@typescript-eslint'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
+    'standard-with-typescript'
+  ],
   overrides: [
   ],
   parserOptions: {

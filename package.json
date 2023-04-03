@@ -7,7 +7,11 @@
     "dev": "nodemon src/server.ts",
     "build": "sucrase ./src -d ./dist --transforms typescript,imports"
   },
-  "keywords": ["chat", "anonymous", "api"],
+  "keywords": [
+    "chat",
+    "anonymous",
+    "api"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -24,5 +28,8 @@
     "prettier": "^2.8.7",
     "sucrase": "^3.31.0",
     "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
   }
 }

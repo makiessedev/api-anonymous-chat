@@ -1,1 +1,2 @@
-console.log('hello friends')
+const n: number = 8
+
