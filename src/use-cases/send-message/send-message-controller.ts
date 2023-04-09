@@ -16,7 +16,7 @@ class SendMessageController {
 
     const { sender, content, group } = sendMessageBody.parse(request.body)
 
-    const message = this.sendMessageUseCase.execute({sender, content, group})
+    const message = await this.sendMessageUseCase.execute({sender, content, group})
 
     return response.json(message)
   }
