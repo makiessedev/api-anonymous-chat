@@ -1,3 +1,4 @@
+import { Group } from '@prisma/client'
 import { prisma } from '../../utils/prisma'
 
 type GroupInput = {
@@ -8,8 +9,7 @@ type GroupInput = {
 
 class CreateGroupUseCase {
 
-  async execute({ description, name, brand }: GroupInput): Promise<any> {
-
+  async execute({ description, name, brand }: GroupInput): Promise<Group> {
     const group = await prisma.group.create({
       data: {
         name,
